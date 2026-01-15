@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lora', Serif;
+}
+a{
+    text-decoration: none;
+    padding: 5px;
+}
+div.message{
+    width: 100%;
+    height: 80px;
+    background: darkgrey;
+    text-align: center;
+    color: azure;
+    padding-top: 25px;
+}
+
+/* HEADER */
+header{
+    width: 100%;
+    height: 15vh;
+    min-height: 100px;
+    background: #ffd966;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    transition: all ease 1s;
+}
+body > h1{
+    width: 100%;
+    height: 15vh;
+    min-height: 100px;
+    background: #ffd966;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+header.auth{
+    width: 100%;
+    height: 15vh;
+    min-height: 100px;
+    background: #222222;
+    color: #ffd966;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+/* MAIN */
+main{
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    overflow: scroll;
+}
+section.auth{
+    align-content: flex-start;
+    height: 100%;
+    min-height: 600px;
+    overflow: scroll;
+}
+main.player{
+    flex-direction: column;
+    align-items: flex-start;
+}
+main.listado > section{
+    padding: 30px;
+}
+
+main a{
+    color: #222222;
+    background: #ffd966;
+}
+main a:hover{
+    color: #ffd966;
+    background: #222222;
+    transition: all ease 0.5s;
+}
+section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+
+h4{
+    font-size: 20px;
+    font-weight: bold;
+}
+/* FORM */
+form{
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+}
+label, input{
+    margin-bottom: 10px;
+}
+input{
+    padding: 10px 8px;
+}
+input[type=submit], .black{
+    background: #222222;
+    border: 0;
+    color: #ffd966;
+    padding: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100px;
+    margin-bottom: 0;
+}
+.logout{
+    margin-left: 5px;
+}
+input[type=submit]:hover, .black:hover{
+    color: #222222;
+    background: #ffd966;
+    transition: all ease 0.5s;
+
+}
+div h2{
+    margin-bottom: 10px;
+}
+.menu-form{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.menu-form > a{
+    margin-left: 7px;
+}
+textarea{
+    border: solid 2px #ffd966;
+    min-height: 80px;
+}
+.auth section{
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-height: 500px;
+}
+.auth section > div{
+    padding: 30px;
+}
+.auth section > div:first-child{
+    border-bottom: solid 1px grey;
+}
+/* LIST */
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    width: 100%;
+}
+li{
+    border: solid 1px #222222;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    background: #ffd966;
+    margin-bottom: 10px;
+    width: 20%;
+    min-height: 300px;
+}
+li div{
+    display: flex;
+    flex-direction: column;
+}
+li span{
+    font-size: 1.25rem;
+    background: #ffd966;
+}
+li div a{
+    background: #222222;
+    color: #ffd966;
+    padding: 5px;
+    margin-bottom: 5px;
+    border: solid 1px #222222;
+}
+li div a:hover{
+    background: #ffd966;
+    color: #222222;
+    padding: 5px;
+    margin-bottom: 5px;
+    transition: all ease 0.5s;
+}
+
+
+
+
+
+/* FOOTER */
+footer{
+    width: 100%;
+    height: 15vh;
+    min-height: 100px;
+    color: #ffd966;
+    background: #222222;
+    text-align: center;
+    padding-top: 20px;
+}
+footer > img{
+    max-width: 200px;
+}
+
+footer> a{ color:white;background: transparent}
+footer> a:hover{ color:#ffd966;background: transparent}
+
+@media (max-width: 780px) {
+header{
+    color: #ffd966;
+    background: #222222;
+    transition: all ease 1s;
+}
+
+    ul{height: 100%;padding-top: 10px}
+    li{width: 80%;transition: all ease 1s;}
+}
+
