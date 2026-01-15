@@ -7,7 +7,7 @@
 Talent ScoutTech, desarrollada por ACME, es una aplicación web diseñada para revolucionar la forma en que se descubren y evalúan talentos deportivos. Esta plataforma permite a los usuarios añadir jugadores interesantes a una base de datos y anexar comentarios sobre su idoneidad para la contratación. Aunque los comentarios no pueden ser editados, los perfiles de los jugadores sí pueden ser actualizados, reflejando cambios como el equipo al que pertenecen.
 
 El objetivo principal de este proyecto es auditar Talent ScoutTech, identificando vulnerabilidades críticas en su código y configuración.  
-![][image1]
+![alt text](image-4.png)
 
 # Metodología Aplicada 
 
@@ -25,12 +25,12 @@ Sesiones de usuario \- Configuración del servidor
 He intentado provocar un error SQL para identificar la estructura de la consulta vulnerable. introduciendo en el formulario del login el usuario “ y la contraseña password
 
 El sistema devolvió el siguiente error SQL:  
-![][image2]  
+![alt text](image-3.png)
 Gracias a la SQL Injection del apartado anterior, sabemos que este formulario es vulnerable y conocemos el nombre de los campos de la tabla “users”.
 
 Vamos a atacarlo para comprobar si podemos entrar con contraseñas comunes, con la inserción SQL podemos entrar:  
 " OR PASSWORD="1234" –  
-![][image3]
+![alt text](image-2.png)
 
 Como podemos ver podemos iniciar sesión sin problemas mediante la SQL Injection
 
@@ -40,13 +40,13 @@ Como podemos ver podemos iniciar sesión sin problemas mediante la SQL Injection
 
 Para comprobar si la aplicación es vulnerable a XSS, se introduce en el formulario de comentarios de un jugador un mensaje que contiene código HTML con JavaScript embebido. Dicho comentario se almacena correctamente en la base de datos.
 
-![][image4]
+![alt text](image.png)
 
 Este comportamiento confirma que la aplicación es vulnerable a un ataque de tipo XSS persistente (Stored XSS), ya que el código malicioso se almacena en el servidor y se ejecuta en el navegador de cualquier usuario que consulte los comentarios del jugador afectado.
 
 [Mejora implementada en show_comments.php](web/show_comments.php), [add_comment.php](web/add_comment.php) y [list_players.php](web/list_players.php) (Uso de htmlspecialchars).
 
-![][image5]
+![alt text](image-1.png)
 
 # Parte 3 – Control de acceso, autenticación y sesiones
 
